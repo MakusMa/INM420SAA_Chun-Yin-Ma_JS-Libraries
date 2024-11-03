@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Luxury Furniture Home Description">
+    <title>INM420SAA_Chun Yin Ma_JS_Libraries</title>
+    
+    <!------------ CSS Libraries --------------->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!------------ My Css --------------->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <!------------ 1_Particles_js ------------->
+    <div id="particles-js"></div>
+
+    <!------------------------------------ Main Content ------------------------------------------->
+    <div class="main-content">
+        <!---------------------- Nav Bar ---------------------------->
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="./assets/img/Logo.png" alt="Company Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#featured">Featured</a></li>
+                <li><a href="#category">Category</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+    <!------------------------------------ Header ------------------------------------------->
+        <header id="home">
+            <div class="header-content">
+                <h1 data-aos="fade-up">The Luxury Home</h1>
+                <p data-aos="fade-up" data-aos-delay="200">Crafting Your Dream Spaces</p>
+            </div>
+        </header>
+
+        <!----------------- Featured Collection --------------------->
+        <section id="featured">
+            <h2 data-aos="fade-up">Featured Collection</h2>
+            <div class="featured-swiper swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="./assets/img/sofa.png" data-lightbox="featured">
+                            <img src="./assets/img/sofa.png" alt="Bubble Sofa">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./assets/img/bed.png" data-lightbox="featured">
+                            <img src="./assets/img/bed.png" alt="Bubble Bed">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./assets/img/chair.png" data-lightbox="featured">
+                            <img src="./assets/img/chair.png" alt="Bubble Chair">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+
+        <!----------------- Category Section --------------------->
+        <section id="category">
+            <h2 data-aos="fade-up">Shop by Category</h2>
+            <div class="category-grid" data-aos="fade-up" data-aos-delay="200">
+                <div class="category-card">
+                    <img src="./assets/img/1.jpeg" alt="Dining Room">
+                    <div class="category-overlay">
+                        <h3>Dining Room</h3>
+                        <p>Explore our elegant dining collections</p>
+                        <a href="#" class="category-btn">Shop Now</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="./assets/img/3.jpeg" alt="Bedroom">
+                    <div class="category-overlay">
+                        <h3>Bedroom</h3>
+                        <p>Discover comfort and style</p>
+                        <a href="#" class="category-btn">Shop Now</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="./assets/img/2.jpeg" alt="Living Room">
+                    <div class="category-overlay">
+                        <h3>Living Room</h3>
+                        <p>Create your perfect living space</p>
+                        <a href="#" class="category-btn">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!------------------------------------ Footer ------------------------------------------->
+        <footer id="contact">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>Email: theluxuryhome@gmail.com</li>
+                        <li>Phone: (1) 437-437-4378</li>
+                        <li>Address: 56 Steel Avenue, North York, Toronto</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 by MARINER1893. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!---------------------- JavaScript Libraries ---------------------------->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!----------------------- My Js ---------------------------->
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

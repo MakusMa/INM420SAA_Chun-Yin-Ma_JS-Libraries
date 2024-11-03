@@ -1,0 +1,435 @@
+/* -------------- Basic --------------- */
+:root {
+    --secondary-color: #e6b800;
+    --primary-words: #dad5cf;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #ffffff, #EAE0D5);
+    color: #ffffff;
+    position: relative;
+}
+
+/* -------------- Particles --------------- */
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* ------------------------------ Nav Bar -------------------------------- */
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 32px;
+    background: rgba(5, 4, 4, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    box-sizing: border-box;
+    padding: 0px 20px;
+}
+
+/* --------------- Logo ---------------- */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+    padding: 10px;
+}
+
+/* -------------- Nav Link --------------- */
+.nav-links {
+    display: flex;
+    flex-grow: 1; 
+    justify-content: flex-end; 
+    gap: 20px;
+    list-style: none;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: var(--primary-words);
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+.nav-links a:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
+/* ------------------------------ Header -------------------------------- */
+
+header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 32px;
+    margin-top: 64px;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header-content h1 {
+    font-weight: 800;
+    font-size: 100px;
+    margin-bottom: 16px;
+    background: linear-gradient(60deg, #b5a695, #0A0908);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header-content p {
+    font-weight: bolder;
+    font-size: 30px;
+    margin-bottom: 32px;
+    background: linear-gradient(45deg, #b5a695, #0A0908);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ------------------------ Featured Collection ----------------------------- */
+#featured {
+    padding: 64px 16px;
+    max-width: 1200px;
+    margin: 20px auto;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);    
+}
+
+#featured h2 {
+    text-align: center;
+    color: #5f564d;
+    font-size: xx-large;
+    margin-right: 20px;
+}
+
+/* -------------- Swiper - Images --------------- */
+.swiper-slide img {
+    width: 80%;
+    height: 80%;
+    transition: transform 0.5s ease;
+    margin-top: -100px;
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+.swiper-slide:hover img {
+    transform: scale(1.2);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--primary-words);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 24px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+/* ------------------------ Category Section ----------------------------- */
+#category h2 {
+    text-align: center;
+    color: #5f564d;
+    font-size: xx-large;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-top: -60px;
+    margin-bottom: 50px;    
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    padding: 0 32px;
+    max-width: 1200px;
+    margin: 0 auto;   
+}
+
+.category-card {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.category-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    transform: translateZ(0);
+    will-change: transform;
+}
+/* -------------- Cards Effect --------------- */
+.category-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 24px;
+    transform: translateY(100%) translateZ(0);
+    transition: transform 0.3s ease;
+    will-change: transform;
+}
+
+.category-card:hover .category-overlay {
+    transform: translateY(0) translateZ(0);
+}
+
+.category-card:hover img {
+    transform: scale(1.1);
+}
+
+.category-overlay h3 {
+    color: #ffffff;
+    margin: 0 0 8px 0;
+    font-size: 24px;
+}
+
+.category-overlay p {
+    color: #ffffff;
+    margin: 0 0 16px 0;
+    font-size: 14px;
+}
+
+.category-btn {
+    display: inline-block;
+    padding: 8px 24px;
+    background: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.category-btn:hover {
+    background: #EAE0D5;
+    transform: translateY(-2px);
+}
+
+.category-btn:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
+/* ------------------------ Footer  ----------------------------- */
+footer {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    color: var(--primary-words);
+    padding: 64px 32px 16px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* -------------- Left Part --------------- */
+.footer-section h4 {
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul a {
+    color: var(--primary-words);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul a:hover {
+    color: var(--secondary-color);
+}
+/* -------------- Right Part  --------------- */
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: var(--primary-words);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--secondary-color);
+}
+/* -------------- Middle --------------- */
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+}
+
+.newsletter-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background: var(--primary-words);
+}
+
+.newsletter-form button {
+    padding: 8px 16px;
+    background: var(--primary-words);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-words);
+}
+
+.newsletter-form button:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 3px;
+    padding-top: 1px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ------------------ Mobile View - Iphone 12 Pro  ----------------------- */
+@media (max-width: 390px) {
+/* ---------------- Header --------------- */
+    .main-nav {
+        padding: 0px 16px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .header-content h1 {
+        font-size: 60px;
+    }
+
+    .header-content p {
+        font-size: 20px;
+    }
+    
+    .logo img {
+        height:80px;
+        margin-left: 20px;
+    }
+/* ---------------- Featured ----------------- */
+    #featured h2 {
+       margin-top: -100px; 
+       margin-left: 25px;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+    }
+
+    .featured-swiper,
+    .swiper-slide {
+        height: 300px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        padding: 12px;
+        border-radius: 25px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        font-size: 14px;
+    }
+/* ---------------- Category ----------------- */
+    #category h2 {
+        margin-top: 100px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .category-card {
+        height: 300px;
+        margin-bottom: 50px;
+    }
+/* ---------------- Footer ----------------- */
+    .footer-content {
+        text-align: center;
+        margin-top: -40px;
+        margin-bottom: 20px;
+    }
+
+    .footer-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .newsletter-form {
+        align-items: center;
+    }
+}
